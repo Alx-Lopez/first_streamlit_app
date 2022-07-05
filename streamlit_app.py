@@ -29,3 +29,5 @@ streamlit.dataframe(filter_fruits)
 
 streamlit.header('Fruityvice Fruit Advice!')
 streamlit.text(fruityvice_response.json())
+fruit_normalized = pandas.json_normalize(fruityvice_response.json())
+streamlit.dataframe(fruit_normalized)
