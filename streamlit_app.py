@@ -1,6 +1,7 @@
 import streamlit
 import requests
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+fq = 'kiwi'
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+fq)
 
 streamlit.title('My Parents New Healthy Diner')
 
