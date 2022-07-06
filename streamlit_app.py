@@ -1,6 +1,6 @@
 import streamlit
 import requests
-import snowflake.connector
+#import snowflake.connector
 
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+ 'kiwi')
 
