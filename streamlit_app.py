@@ -64,7 +64,7 @@ add_fruit = streamlit.text_input('What fruit would you like to add?')
 def add_fruit_to_list(new_fruit):
     my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
     my_cur = my_cnx.cursor()
-    my_cur.execute(f"insert into fruit_load_list values ({new_fruit})")
+    my_cur.execute("insert into fruit_load_list values ('" + new_fruit + "')" )
     my_cnx.close()
     return 'Thanks for adding' + new_fruit
 add_fruit_to_list(add_fruit)
