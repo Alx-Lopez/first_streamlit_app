@@ -67,5 +67,4 @@ def add_fruit_to_list(new_fruit):
     my_cur.execute("insert into fruit_load_list values ('" + new_fruit + "')" )
     my_cnx.close()
     print('Thanks for adding' + new_fruit )
-streamlit.stop()
 add_fruit_to_list(add_fruit)
